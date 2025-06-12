@@ -180,12 +180,12 @@ class main():
     for giorno, attivita in schedule['attività'].items():
         print(f"{giorno}:")
         for att in attivita:
-            print(f"-Lezione -  {att['materia']} - ({att['orario']}) \ntipo di lezione: {att['tipo']}\n")
+            print(f"-{att['tipo']}-  {att['materia']} - ({att['orario']}) \n")
 
     print("=" * 30)
     
     for attivita, ore in calcoloOre(schedule).items():
-        print(f"Ore totali per {attivita}: {ore} ore")
+        print(f"Ore totali di {attivita}: {ore} ore")
 
     print("=" * 30)
 
